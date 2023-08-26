@@ -1,0 +1,12 @@
+.Hanul-Toggle-secter{
+    left: -120px;
+    padding-left: 30px;
+
+    transition:left 0.5s cubic-bezier(0, 0.55, 0.1, 1);
+}
+
+.show-menu{
+    left:-30px;
+
+    transition:left 0.2s cubic-bezier(0, 0.55, 0.2, 1.5);
+}

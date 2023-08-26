@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, initial-scale=1.0">
+    <title>Title</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="../static/js/scroll_header.js"></script>
+    <script src="../static/js/toggle_menu.js"></script>
+
+    <style>
+        @import url('../static/css/default.css');
+        @import url('../static/css/scroll_header.css');
+        @import url('../static/css/toggle_menu.css');
+    </style>
+    <!-- <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/scroll_header.css"> -->
+</head>
+<body>
+    <div class="main-header">main-header</div>
+    <div class="Hanul-Scroll-header">a<br>a</div>
+
+    <div class="main-secter Hanul-Toggle-secter"><ol style="list-style-type: none;padding:10px;">
+        <li>1</li>
+        <li>2</li>
+    </ol></div>
+    <div class="main-article">
+        <div class="images">
+            <ol class="image-list">
+                {% for (root,dirs,image) in images %}
+                    {% for image in image%}
+                        <li class="image-thumbnail"><img src="../static/images/{{image}}" alt="{{image}}" loading="lazy" width="100" height="100"></li>
+                    {% endfor %}
+                {% endfor%}
+            </ol>
+        </div>
+        <div class="image-viewer">
+        </div>
+    </div>
+</body>
+</html>
