@@ -9,6 +9,7 @@
 
     <script src="../static/js/scroll_header.js"></script>
     <script src="../static/js/toggle_menu.js"></script>
+    <script src="../static/js/hash.js"></script>
 
     <style>
         @import url('../static/css/default.css');
@@ -18,6 +19,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="css/default.css">
     <link rel="stylesheet" type="text/css" href="css/scroll_header.css"> -->
 </head>
+
 <body>
     <div class="main-header">main-header</div>
     <div class="Hanul-Scroll-header">a<br>a</div>
@@ -31,13 +33,13 @@
             <ol class="image-list">
                 {% for (root,dirs,image) in images %}
                     {% for image in image%}
-                        <li class="image-thumbnail"><img src="../static/images/{{image}}" alt="{{image}}" loading="lazy" width="100" height="100"></li>
+                        <li class="image-thumbnail"><a href="#img={{image}}"><img src="{{ thumb(image) }}" alt="{{image}}" loading="lazy" width="100" height="100"></a></li>
                     {% endfor %}
                 {% endfor%}
             </ol>
         </div>
         <div class="image-viewer">
-            <div class="main-image"><img></div>
+            <div class="main-image"><img class="main-image-img" id="main-image-img" alt="" src="..\static\icons\Hopper Icon.png" /></div>
             <h2 class="image-title">TitleTitleTitleTitleTitle TitleTitleTitleTitleTitle TitleTitle Title TitleTitleTitleTitleTitle</h2><h5 class="image-file-name">filename.png</h5>
             <hr>
             <p class="image-description">descrption descrption descrption descrption descrption descrption descrption descrpthfhfdhdfghdfghion desdfhhfdhfdhdfghdfghhfdcrption descrption descrption descrptdfghdfghdfghdfghion descrption descrption descrption descrption descrption descrption descrption descrption descrption </p>
